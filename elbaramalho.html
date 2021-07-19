@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOD Elba Ramalho</title>
+    <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <p>Abertura</p>
+                <video id="abertura" class="video-js vjs-default-skin vjs-16-9 vjs-big-play-centered"></video>
+            </div>
+            <div class="col-sm-6">
+                <p>Elba Ramalho e Padre</p>
+                <video id="elbaepadre" class="video-js vjs-default-skin vjs-16-9 vjs-big-play-centered"></video>
+            </div> 
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <p>Elba Ramalho</p>
+                <video id="elba" class="video-js vjs-default-skin vjs-16-9 vjs-big-play-centered"></video>
+            </div>
+            <div class="col-sm-6">
+                <p>Elba Ramalho e Solange</p>
+                <video id="elbasolange" class="video-js vjs-default-skin vjs-16-9 vjs-big-play-centered"></video>
+            </div> 
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <p>Solange</p>
+                <video id="solange" class="video-js vjs-default-skin vjs-16-9 vjs-big-play-centered"></video>
+            </div>
+            <div class="col-sm-6">
+                <p>Solange e Padre</p>
+                <video id="solangepadre" class="video-js vjs-default-skin vjs-16-9 vjs-big-play-centered"></video>
+            </div> 
+        </div>
+
+        <div class="row mb-2">
+            
+            <div class="col-sm-6">
+                <p>Padre</p>
+                <video id="padre" class="video-js vjs-default-skin vjs-16-9 vjs-big-play-centered"></video>
+            </div>
+            
+            <div class="col-sm-6">
+                <p>Encerramento</p>
+                <video id="encerramento" class="video-js vjs-default-skin vjs-16-9 vjs-big-play-centered"></video>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
+    <script src="https://unpkg.com/@videojs/http-streaming@2.9.2/dist/videojs-http-streaming.min.js"></script>
+    <script type='text/javascript'>
+        var abertura = videojs('abertura',{
+            controls: true,
+            autoplay:   false, 
+            preload: 'auto',
+            muted: false,
+            fluid: true,
+            language: 'pt-BR',
+        });
+        abertura.src([
+            { type: "application/x-mpegURL", src: "https://pd-trr.akamaized.net/9174039.m3u8"},
+        ]);
+
+        var elbaepadre = videojs('elbaepadre',{
+            controls: true,
+            autoplay:   false, 
+            preload: 'auto',
+            muted: false,
+            fluid: true,
+            language: 'pt-BR',
+        });
+        elbaepadre.src([
+            { type: "application/x-mpegURL", src: "https://pd-trr.akamaized.net/9174024.m3u8"},
+        ]);
+
+        var elba = videojs('elba',{
+            controls: true,
+            autoplay:   false, 
+            preload: 'auto',
+            muted: false,
+            fluid: true,
+            language: 'pt-BR',
+        });
+        elba.src([
+            { type: "application/x-mpegURL", src: "https://pd-trr.akamaized.net/9174064.m3u8"},
+        ]);
+
+        var elbasolange = videojs('elbasolange',{
+            controls: true,
+            autoplay:   false, 
+            preload: 'auto',
+            muted: false,
+            fluid: true,
+            language: 'pt-BR',
+        });
+        elbasolange.src([
+            { type: "application/x-mpegURL", src: "https://pd-trr.akamaized.net/9174063.m3u8"},
+        ]);
+
+        var solange = videojs('solange',{
+            controls: true,
+            autoplay:   false, 
+            preload: 'auto',
+            muted: false,
+            fluid: true,
+            language: 'pt-BR',
+        });
+        solange.src([
+            { type: "application/x-mpegURL", src: "https://pd-trr.akamaized.net/9174061.m3u8"},
+        ]);
+
+        var solangepadre = videojs('solangepadre',{
+            controls: true,
+            autoplay:   false, 
+            preload: 'auto',
+            muted: false,
+            fluid: true,
+            language: 'pt-BR',
+        });
+        solangepadre.src([
+            { type: "application/x-mpegURL", src: "https://pd-trr.akamaized.net/9174038.m3u8"},
+        ]);
+
+        var padre = videojs('padre',{
+            controls: true,
+            autoplay:   false, 
+            preload: 'auto',
+            muted: false,
+            fluid: true,
+            language: 'pt-BR',
+        });
+        padre.src([
+            { type: "application/x-mpegURL", src: "https://pd-trr.akamaized.net/9174065.m3u8"},
+        ]);
+
+        var encerramento = videojs('encerramento',{
+            controls: true,
+            autoplay:   false, 
+            preload: 'auto',
+            muted: false,
+            fluid: true,
+            language: 'pt-BR',
+        });
+        encerramento.src([
+            { type: "application/x-mpegURL", src: "https://pd-trr.akamaized.net/9174062.m3u8"},
+        ]);
+    </script>
+
+</body>
+</html>
